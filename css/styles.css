@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- Variables ---- */
+:root {
+  --whiteColor: white;
+  --blackColor: #121212;
+  --lightGray: #f5f5f5;
+  --veryDarkGray: #1f1f1f;
+
+  --globalTransition: all 0.5s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--veryDarkGray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+p,
+a,
+label,
+input,
+textarea {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--veryDarkGray);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section-title {
+  padding: 10px 0;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-description {
+  margin: 10px 0;
+  line-height: 2;
+}
+
+/* ---------------------- HEADER SECTION -------------------------- */
+header {
+  background-color: var(--lightGray);
+
+  text-align: center;
+  height: 50vh;
+}
+
+.navbar {
+  background: var(--lightGray);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.nav-list {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-list li a {
+  transition: var(--globalTransition);
+}
+
+.nav-list li a:hover {
+  color: gray;
+}
+
+.hero-title {
+  padding: 100px 30px;
+}
+
+.my-name {
+  color: var(--veryDarkGray);
+  margin-bottom: 30px;
+  font-weight: 350;
+}
+
+.job-title {
+  display: inline;
+  margin-top: 10px;
+  border-top: 1px solid var(--veryDarkGray);
+  border-bottom: 1px solid var(--veryDarkGray);
+  padding: 10px 0;
+  color: gray;
+}
+
+/* --------------------------- ABOUT ME SECTION ---------------------------------*/
+.about-section {
+  padding: 50px 0 10px 0;
+  text-align: center;
+}
+
+.myPhoto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.about-section .section-title {
+  margin: 10px auto;
+}
+
+.about-me {
+  text-align: center;
+}
+
+.about-description {
+  margin: 10px 0 30px 0;
+  line-height: 2;
+}
+
+.download-resume-btn {
+  border: 1px solid var(--veryDarkGray);
+  padding: 10px 20px;
+  display: block;
+  width: 200px;
+  margin: 0 auto 30px auto;
+  transition: var(--globalTransition);
+}
+
+.download-resume-btn:hover {
+  background: var(--blackColor);
+  color: var(--whiteColor);
+}
+
+.skills {
+  background: var(--veryDarkGray);
+  color: var(--whiteColor);
+  margin-bottom: 50px;
+  padding: 20px;
+  width: unset;
+}
+
+.skills .section-title {
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--lightGray);
+}
+
+.skills h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "frontend" "backend";
+  width: 70%;
+  margin: auto;
+}
+
+.front-end-skills,
+.back-end-skills {
+  text-align: left;
+  margin: 30px 0;
+}
+
+.technologies {
+  grid-area: frontend;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fab,
+.fas,
+.fa-database {
+  font-size: 1.5rem;
+  transition: var(--globalTransition);
+}
+
+.fa-node {
+  font-size: 1.5rem;
+}
+
+.fab:hover {
+  transform: translateY(-10px);
+}
+.fa-html5:hover {
+  color: orangered;
+}
+.fa-css3:hover {
+  color: rgb(0, 94, 202);
+}
+.fa-js:hover {
+  color: gold;
+}
+
+.fa-sass:hover {
+  color: hotpink;
+}
+
+.fa-node:hover {
+  color: rgb(68, 114, 0);
+}
+
+.fa-database:hover {
+  color: cornflowerblue;
+}
+
+/* --------------------------------- PROJECTS -------------------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+}
+
+.project {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--whiteColor);
+  padding: 20px;
+  font-size: 16px;
+  transition: all 1s ease-in;
+}
+
+.project:hover {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.project1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)),
+    url("/images/mobile/image-night-arcade.jpg") center/cover no-repeat;
+}
+.project2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)),
+    url("/images/mobile/image-pocket-borealis.jpg") center/cover no-repeat;
+}
+.project3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)),
+    url("/images/mobile/image-interactive.jpg") center/cover no-repeat;
+}
+
+/* ------------------------------- CODING CHALLENGES ---------------------------------- */
+.coding-challenges-section {
+  margin-top: 20px;
+  padding: 30px 40px 40px 40px;
+  background: var(--veryDarkGray);
+  color: var(--whiteColor);
+}
+
+.coding-challenges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.challenge {
+  border: 1px solid var(--lightGray);
+  color: var(--whiteColor);
+  text-align: center;
+  height: 60px;
+  padding: 5px;
+  transition: var(--globalTransition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.challenge:hover {
+  background-color: var(--whiteColor);
+  color: var(--veryDarkGray);
+}
+
+/* -------------------------------- CONTACT ME SECTION ------------------------------- */
+.contact-section {
+  padding: 50px 0;
+}
+label {
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--veryDarkGray);
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 3px solid var(--veryDarkGray);
+  outline: none;
+}
+
+#message {
+  height: 150px;
+  padding-top: 0;
+}
+
+#send-email-btn {
+  background: var(--whiteColor);
+  font-size: 18px;
+  border: 1px solid var(--veryDarkGray);
+  padding: 10px 20px;
+  display: block;
+  width: 200px;
+  margin: 0 auto 30px auto;
+  transition: var(--globalTransition);
+}
+
+#send-email-btn:hover {
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--blackColor);
+}
+
+/* ------------------------------- FOOTER SECTION ---------------------------------- */
+.footer-section {
+  background-color: var(--veryDarkGray);
+  color: var(--whiteColor);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  width: 375px;
+  margin: 0 auto 20px auto;
+}
+
+.social-links a {
+  color: var(--whiteColor);
+}
+
+/* --------------------- MEDIA QUESRIES ---------------------- */
+/* Very small screens */
+@media only screen and (min-width: 200px) {
+}
+/* Tablet screens */
+@media only screen and (min-width: 768px) {
+  .skills .section-title {
+    width: 60%;
+  }
+  .nav-list {
+    width: 60%;
+  }
+  .about-description {
+    width: 60%;
+    margin: 10px auto 30px auto;
+  }
+  /* skills */
+  .technologies {
+    width: 60%;
+    margin: 0 auto;
+  }
+  /* Projects 3-column grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+
+  /* form */
+  form {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+/* Laptop screens */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 60%;
+  }
+  .my-name {
+    font-size: 4rem;
+  }
+  .job-title {
+    font-size: 2rem;
+  }
+  .nav-list {
+    width: 50%;
+  }
+  .project {
+    height: 250px;
+  }
+
+  .coding-challenges-grid {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Desktop screens */
+@media only screen and (min-width: 1600px) {
+  /* Styles here */
+}
